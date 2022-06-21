@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    height: 100vh;
+    font-weight: bold;
+    color: white;
+}
+
+nav {
+    margin-top: 100px;
+    text-align: center;
+    background-color: black;
+}
+
+.menu-item {
+    display: inline-block;
+    height: 100px;
+    width: 300px;
+    line-height: 100px;
+    cursor: pointer;
+    transition: background-color .3s;
+
+}
+
+.menu-item:hover {
+    background-color: #808080;
+}
+
+.dropdown {
+    
+    position: absolute;
+    width: 300px;
+}
+
+.dropdown li {
+    background-color: #50515A;
+    opacity: 0;
+    transition: color .3s;
+}
+
+.dropdown li:hover {
+    color: royalblue;
+}
+
+.menu-item:hover .dropdown li {
+    display: block;
+    animation: menu1 .5s forwards;
+}
+
+.menu-item:hover .dropdown li:nth-child(2) {
+    animation-delay: .4s;
+}
+
+.menu-item:hover .dropdown li:nth-child(3) {
+    animation-delay: .6s;
+}
+
+.menu-item:hover .dropdown li:nth-child(4) {
+    animation-delay: .7s;
+}
+
+.menu-item:hover .dropdown li:nth-child(5) {
+    animation-delay: .8s;
+}
+
+.menu-item:hover .dropdown li:nth-child(6) {
+    animation-delay: .9s;
+}
+
+
+@keyframes menu1{
+    from {
+        opacity: 0;
+        transform: rotate(36deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+/* Pozycja 2 */
+
+.two:hover .dropdown li {
+    display: block;
+    animation: menu2 .5s forwards;
+}
+
+@keyframes menu2 {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pozycja 3 */
+
+.three:hover .dropdown li {
+    display: block;
+    animation: menu3 .5s forwards;
+}
+
+@keyframes menu3 {
+    from {
+        opacity: 0;
+        transform: rotateY(-60deg) translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateY(0) translateX(0);
+    }
+}
+
+/* Pozycja 3 */
+
+.four:hover .dropdown li {
+    display: block;
+    animation: menu4 .5s forwards;
+    transform-origin: top;
+}
+
+@keyframes menu4 {
+    from {
+        opacity: 0;
+        transform: scale(.8) translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+    }
+}
